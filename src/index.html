@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <h1 class="text-center text-5xl py-5 font-bold">To ReDo List </h1>
+
+
+    <form id="todo-form" class="flex justify-center gap-3">
+        <input required class="border rounded px-2 py-2" placeholder="title..." type="text" id="title-input" name="title">
+        <input required class="border rounded px-2 py-2" placeholder="body..." type="text" id="body-input" name="body">
+        <button class="border-0 bg-blue-700 rounded px-5 py-2 text-white">create</button>
+    </form>
+
+    <div id="todos" class="container gap-3 px-10 py-7 grid grid-cols-4">
+
+            
+            <!-- <label data-id="0" class="shadow flex items-center gap-3 p-3 rounded border">
+                <input id="default-checkbox" type="checkbox" value="" class="w-5 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <div>
+                    <h3 class="text-xl font-semibold"> lorem ipsum</h3>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing </p>
+                </div>
+            </label> -->
+            
+            
+        
+    </div>
+
+    
+
+    <template id="temp">
+        <label data-id="0" class="todo pr-8 relative shadow flex items-center gap-3 p-3 rounded border">
+            <input data-id="0" type="checkbox" value="" 
+            
+            class="todo-checkbox w-5 h-4 pointer-events-none text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <div class="pointer-events-none">
+                <h3 class="text-xl font-semibold" style="text-wrap:  wrap; word-break: break-all; ">title</h3>
+                <p>body</p>
+            </div>
+
+            <button class="absolute edit-todo text-blue-500 top-1/2 right-16 transform -translate-y-1/2">
+                <i class="fa fa-edit"></i>
+            </button>
+            
+            <button class="absolute  del-todo text-red-500 top-1/2 right-4 transform -translate-y-1/2">
+                <i class="fa fa-trash"></i>
+            </button>
+        </label> 
+    </template>
+
+
+
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html> 
+<!-- onchange="e =>changeChecked(e)" -->
